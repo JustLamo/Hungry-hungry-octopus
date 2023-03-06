@@ -1,0 +1,520 @@
+body{
+    margin: 0;
+    overflow: hidden;
+
+}
+
+img {
+    width: 100%;
+}
+
+#screen {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    
+}
+
+
+#game {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    cursor: crosshair;
+
+}
+
+#start {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-image: url();
+    z-index: 999;
+    background-size: 100%;
+}
+
+#start_btn {
+    width: 10%;
+    height: 5%;
+    position: absolute;
+    top: 43%;
+    left: 43%;  
+    font-size: large;
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #D1E5E1;
+    cursor: pointer;
+    
+}
+
+.pulse{
+animation-duration: 4s;
+animation-name: pulse;
+animation-iteration-count: infinite;
+animation-direction: alternate-reverse;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(100%);
+}
+    50%{
+        transform: scale(80%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+
+#game_over{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    background-image: url(images/background\ dead\ .jpg);
+}
+
+.hidden,
+    #game_over.hidden,
+    #level_complete.hidden,
+    #start.hidden {
+    display: none;
+    }
+
+#game_over{
+    position: absolute;
+    z-index: 999;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-image: url(images/background\ dead\ .jpg);
+    color: #D1E5E1;
+    background-size:cover;
+}
+
+/* #level_complete {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+    background-image: url(./images/levelcomplete.png);
+    color: #D1E5E1;
+} */
+
+#game_background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-image: url(images/water\ background1.gif);
+    margin: 0;
+    background-size: cover;
+}
+
+#timer_container{
+    height: 50%;
+    width: 15%;
+    position: absolute;
+    top: 73%;
+    left: 60%;
+}
+
+.timer_container{
+    animation-duration: 5s;
+    animation-name: timecontainer;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes timecontainer {
+    0%{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    100%{
+        clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+}
+
+#point_container1{
+    height: 10%;
+    width: 10%;
+    top: 78%;
+    left: 85%;
+    position: absolute;
+    z-index: 999;
+}
+
+#point_counter{
+    position: absolute;
+    top: 68%;
+    left: 45%;
+    font-size: xx-large;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+}
+
+#fiske_container {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 5%;
+    left: 80%;
+}
+
+.fiske_container {
+    animation-duration: 6s;
+    animation-name: fiskeanimation;
+    animation-iteration-count: infinite;
+   
+}
+
+@keyframes fiskeanimation {
+    0% {
+        transform: translate(200%, 50%);
+    }
+    25%{
+        transform: translate(250%, -50%);
+    }
+    50%{
+        transform: translate(250%, 80%);
+    
+    }
+    100%{
+        transform: translate(-890%, -40%);
+    }
+}
+
+   #fiske_container2 {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    bottom: 50%;
+    right: 110%;
+   }
+
+   .fiske_container_2 {
+    animation-duration: 8s;
+    animation-name: fiskeanimation2;
+    animation-iteration-count: infinite;
+   }
+
+   @keyframes fiskeanimation2{
+
+    0%{
+        transform: translate(-200%, 50%);
+    }
+    50%{
+        transform: translate(-200%, -40%);
+    }
+    100%{
+        transform: translate(1300%, 80%);
+    }
+   }
+
+   #fiske_container3 {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    bottom: 20%;
+    right: 100%;
+   }
+
+   .fiske_container_3{
+    animation-duration: 5s;
+    animation-name: fiskeanimation3;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+   }
+
+   @keyframes fiskeanimation3{
+    0% {
+    transform: translate(-110%, 30%);    
+    }
+    50% {
+        transform: translate(-150%, -300%);
+    }
+    100%{
+        transform: translate(1100%, -100%);
+    }
+   }
+
+#bobble_container{
+    width: 8%;
+    height: 7%;
+    left: 10%;
+}
+
+#bobble_container2{
+    width: 5%;
+    height: 6%;
+    left: 90%;
+    animation-delay: 3s;
+}
+
+.floatup {
+    animation-name: float-up;
+    animation-iteration-count: infinite;
+    position: absolute;
+    animation-duration: 8s;
+}
+@keyframes float-up {
+    0% {
+      bottom: -20%;
+      transform: translateX(-10%) translateY(0);
+    }
+    50% {
+      transform: translateX(-90%) translateY(-30%);
+    }
+    100% {
+      bottom: 100%;
+      transform: translateX(-30%) translateY(-50%);
+    }
+  }
+
+#haj_container1 {
+
+    width: 30%;
+    height: 10%;
+    position: absolute;
+    top: 20%;
+    left: 110%;
+
+   
+}
+
+.haj_container{
+    animation-name: Animatioon;
+    animation-duration: 8s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Animatioon {
+    0% {
+    transform: translate(800%, 0%);
+}
+ 100%{
+    transform: translate(-600%, 0%);
+ }
+    }
+
+#haj_container2 {
+width: 30%;
+height: 10%;
+position: absolute;
+top: 7%;
+left: 20%;
+
+}
+
+.haj_container2 {
+    animation-name: sharkanimation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+   
+}
+
+@keyframes sharkanimation {
+    0% {
+    transform: translate(-200%, 0%);    
+    }
+    50%{
+        transform: translate(300%, 0%);
+    }
+    100%{
+        transform: translate(300%, 0%);
+    }
+}
+
+
+#octopus_container {
+animation-name: octopusanimation;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-direction: alternate-reverse;
+    width: 15%;
+    height: 10%;
+    position: absolute;
+    top: 67%;
+    left: 40%;
+}
+
+@keyframes octopusanimation {
+    100%{
+        transform: scale(110%);
+    }
+}
+
+#baby_octopus {
+
+    width: 5%;
+    height: 5%;
+    position: absolute;
+    top: 80%;
+    left: 4%;
+    animation-name: baby1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+#baby_octopus1 {
+
+    width: 5%;
+    height: 5%;
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    animation-name: baby2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: 1s;
+}
+#baby_octopus2 {
+    width: 5%;
+    height: 5%;
+    position: absolute;
+    top: 80%;
+    left: 16%;
+    animation-name: baby3;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: 2s;
+}
+
+@keyframes baby1 {
+    100%{
+        transform: scale(110%);
+    }
+}
+
+@keyframes baby2 {
+    100%{
+        transform: scale(110%);
+    }
+}
+
+@keyframes baby3 {
+    100%{
+        transform: scale(110%);
+    }
+    
+}
+
+#plastik_container {
+    top: -20%;
+    left: 60%;
+    height: 20%;
+    width: 25%;
+    position: absolute;
+   
+}
+
+.plastik_container {
+    animation-name: plastikflaske;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+
+@keyframes plastikflaske {
+    0%{opacity: 0.6;}
+
+    100%{transform: translateY(1000%) ;}
+}
+
+#plastik_container2 {
+    top: -20%;
+    left: 10%;
+    height: 20%;
+    width: 25%;
+    position: absolute;
+   
+}
+
+.plastik_container2 {
+    animation-name: plastikflaske2;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes plastikflaske2 {
+    0%{opacity: 0.6;}
+
+    100%{
+        transform: translateY(1000%) ;
+    }
+}
+
+#start {
+    top: 50%;
+    left: 45%;
+}
+
+.explode{
+    animation-name: explode;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes explode {
+    0%{
+        transform: scale(1);
+    }
+
+    75%{
+        transform: scale(1.7);
+        filter:opacity(1);
+    }
+
+    100%{
+        transform: scale(1.7);
+        filter:opacity(0)
+    }
+}
+
+.explode2{
+    animation-name: explode2;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes explode2 {
+    0%{
+        transform: scale(1);
+    }
+
+    75%{
+        transform: scale(1.7);
+        filter:opacity(1);
+    }
+
+    100%{
+        transform: scale(1.7);
+        filter:opacity(0)
+    }
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+

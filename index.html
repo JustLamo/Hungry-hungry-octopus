@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungry Hungry Octopus</title>
+    <link rel="stylesheet" href="app.css">
+
+</head>
+<body>
+<div id="screen">
+<div id="game">
+
+
+    <div id="game_background">
+        <img src="./images/water background1.gif" >
+    </div>
+    <div id="game_elements">
+
+    
+    <div id="fiske_container">
+        <img src="./images/fish1.png" alt="deadfish" >
+        
+    </div>
+
+    <div id="fiske_container2">
+        <img src="./images/fish2.png" alt="deadfish">
+    </div>
+
+    <div id="fiske_container3">
+        <img src="./images/fish2.png">
+    </div>
+
+
+    <div id="plastik_container">
+        <img src="./images/waterbottlev3-removebg-preview (1).png" >
+    </div>
+
+    <div id="plastik_container2">
+        <img src="images/waterbottlev3-removebg-preview (1).png" alt="">
+    </div>
+
+    <div id="haj_container1">
+        <img src="./images/shark.png">
+    </div>
+
+    <div id="haj_container2">
+        <img src="./images/shark reverse.png" id="omvendt_haj">
+    </div>
+ 
+    <div id="bobble_container" class="floatup">
+        <img src="./images/bubble.png">
+    </div>
+
+    <div id="bobble_container2" class="floatup">
+        <img src="./images/bubble.png">
+
+    </div>
+    
+    <div id="octopus_container">  
+        <img src="./images/octopus.png"> 
+
+    </div>
+
+    <div id="baby_octopus">
+        <img src="./images/71BuMKAE-bL-removebg-preview.png" alt="baby1" id="life1">
+
+    </div>
+    <div id="baby_octopus1">
+        <img src="./images/71BuMKAE-bL-removebg-preview.png" alt="baby2" id="life2">
+
+    </div>
+
+    <div id="baby_octopus2">
+        <img src="./images/71BuMKAE-bL-removebg-preview.png" alt="baby3" id="life3">
+
+       
+
+    </div>
+
+    
+
+    <audio id="chew" src="sounds/chew-21768.mp3"></audio>
+
+    <audio id="splash" src="Sounds/tiny-splash-83778.mp3"></audio>
+
+    <audio id="underwater" src="sounds/underwater-ambience-6201.mp3"></audio>
+
+    <audio id="bottle" src="Sounds/Video uden titel - Skabt med Clipchamp.mp4"></audio>
+</div>
+
+<div id="game_foreground">
+        </div>
+      </div>
+      
+</div>
+<div id="game_ui">
+
+    <div id="life_counter"></div>
+
+    <div id="point_container1">
+        <img src="./images/plate-removebg-preview.png">
+        <div id="point_counter">
+            0
+        </div>
+    </div>
+    <div id="timer_container">
+        <img src="./images/seaweed-removebg-preview.png" class="timer_container" id="time_sprite">
+    </div>
+</div>
+
+</div>
+<div id="start" class="hidden">
+    <button id="start_btn" class="pulse"> Start </button>
+</div>
+
+<div id="game_over" class="hidden">
+<h2>Too bad</h2>
+<button id="btn_restart" class="pulse"> Restart game </button>
+</div>
+
+<div id="level_complete" class="hidden">
+<h2>Congratulations!! </h2>
+<button id="btn_go_to_start" class="pulse">Go to start</button>
+
+</div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
