@@ -55,6 +55,7 @@ img {
 #btn_restart {
     width: 20%;
     height: 15%;
+    margin: 1%;
     position: absolute;
     top: 20%;
     left: 40%;  
@@ -64,6 +65,9 @@ img {
     background-color: #D1E5E1;
     cursor: pointer;
     pointer-events: all;
+    text-transform: uppercase;
+    text-decoration: solid;
+    text-shadow: 1px 1px black  ;
 }
 
 .pulse{
@@ -147,7 +151,7 @@ animation-direction: alternate-reverse;
     background-image: url(images/water\ background2.gif);
     margin: 0;
     background-size: cover;
-    
+
 }
 
 
@@ -160,7 +164,7 @@ animation-direction: alternate-reverse;
 }
 
 .timer_container{
-    animation-duration: 60s;
+    animation-duration: 35s;
     animation-name: timecontainer;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
