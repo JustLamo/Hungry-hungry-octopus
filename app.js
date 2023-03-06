@@ -28,6 +28,9 @@ function onload() {
 
     document.querySelector("#time_sprite").addEventListener("animationend", checkScore);
 
+    document.querySelector("#musik").play();
+    
+
 
 function checkScore (){
     if (point < 15) {
@@ -252,6 +255,25 @@ function decrementLife () {
 }
 function gameOver () {
     document.querySelector("#game_over").classList.remove("hidden");
-}
 
+    document.querySelector("#fail").play();
+    document.querySelector("#musik").pause();
+    document.querySelector("#bottle").pause();
+    document.querySelector("#btn_restart").addEventListener("click", refresh);
+}
+function levelComplete () {
+    console.log("LevelComplete");
+    document.querySelector("#level_complete").classList.remove("hidden");
+
+    document.querySelector("#win").play();
+    document.querySelector("#musik").pause();
+    document.querySelector("#bottle").pause();
+    document.querySelector("#level_complete_btn").addEventListener("click", refresh);
+
+
+}
+function refresh (){
+    console.log("refresh");
+    location.reload();
+}
 }

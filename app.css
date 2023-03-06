@@ -38,18 +38,32 @@ img {
     background-size: 100%;
 }
 
-#start_btn {
-    width: 10%;
-    height: 5%;
+#level_complete_btn {
+    width: 20%;
+    height: 20%;
     position: absolute;
-    top: 43%;
-    left: 43%;  
-    font-size: large;
+    top: 30%;
+    left: 40%;  
+    font-size: xx-large;
     color: black;
     font-family:Georgia, 'Times New Roman', Times, serif;
     background-color: #D1E5E1;
     cursor: pointer;
-    
+    pointer-events: all;
+}
+
+#btn_restart {
+    width: 20%;
+    height: 15%;
+    position: absolute;
+    top: 20%;
+    left: 40%;  
+    font-size: xx-large;
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #D1E5E1;
+    cursor: pointer;
+    pointer-events: all;
 }
 
 .pulse{
@@ -95,17 +109,33 @@ animation-direction: alternate-reverse;
     justify-content: center;
     align-content: center;
     background-image: url(images/background\ dead\ .jpg);
-    color: #D1E5E1;
+    color: #6b0f0f;
     background-size:cover;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 300%;
+    font-style: italic;
+    text-shadow: 2px 2px black;
+    text-transform: uppercase;
+    
 }
 
 #level_complete {
     width: 100%;
     height: 100%;
     position: absolute;
+    justify-content: center;
+    align-content: center;
     z-index: 999;
     background-image: url(./images/levelcomplete.png);
-    color: #D1E5E1;
+    color: #e2e600;
+    font-size: 300%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  ;
+    text-align: center;
+    text-decoration: solid  ;
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: 2px 2px black;
 } 
 
 #game_background {
@@ -117,7 +147,9 @@ animation-direction: alternate-reverse;
     background-image: url(images/water\ background2.gif);
     margin: 0;
     background-size: cover;
+    
 }
+
 
 #timer_container{
     height: 50%;
@@ -128,7 +160,7 @@ animation-direction: alternate-reverse;
 }
 
 .timer_container{
-    animation-duration: 5s;
+    animation-duration: 60s;
     animation-name: timecontainer;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
