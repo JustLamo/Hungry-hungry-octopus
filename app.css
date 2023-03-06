@@ -32,6 +32,7 @@ img {
     height: 100%;
     top: 0%;
     left: 0%;
+    position: absolute;
     background-image: url();
     z-index: 999;
     background-size: 100%;
@@ -98,14 +99,14 @@ animation-direction: alternate-reverse;
     background-size:cover;
 }
 
-/* #level_complete {
+#level_complete {
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 999;
     background-image: url(./images/levelcomplete.png);
     color: #D1E5E1;
-} */
+} 
 
 #game_background {
     width: 100%;
@@ -113,7 +114,7 @@ animation-direction: alternate-reverse;
     position: absolute;
     top: 0%;
     left: 0%;
-    background-image: url(images/water\ background1.gif);
+    background-image: url(images/water\ background2.gif);
     margin: 0;
     background-size: cover;
 }
@@ -246,12 +247,14 @@ animation-direction: alternate-reverse;
    }
 
 #bobble_container{
+    position: absolute;
     width: 8%;
     height: 7%;
     left: 10%;
 }
 
 #bobble_container2{
+    position: absolute;
     width: 5%;
     height: 6%;
     left: 90%;

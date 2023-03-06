@@ -253,4 +253,5 @@ function decrementLife () {
 function gameOver () {
     document.querySelector("#game_over").classList.remove("hidden");
 }
+
 }
