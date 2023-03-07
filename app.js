@@ -280,8 +280,8 @@ function refresh (){
 
 var startScreen = document.getElementById('start-screen');
 var startButton = document.getElementById('start-button');
-var gameCanvas = document.getElementById('game-canvas');
-var ctx = gameCanvas.getContext('2d');
+var gameSkærm = document.getElementById('game-skærm');
+
 
 document.querySelector("#musik").currentTime = 1;
 document.querySelector("#musik").play();
