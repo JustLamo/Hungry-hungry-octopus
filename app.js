@@ -277,3 +277,18 @@ function refresh (){
     location.reload();
 }
 }
+
+var startScreen = document.getElementById('start-screen');
+var startButton = document.getElementById('start-button');
+var gameCanvas = document.getElementById('game-canvas');
+var ctx = gameCanvas.getContext('2d');
+
+document.querySelector("#musik").currentTime = 1;
+document.querySelector("#musik").play();
+startButton.addEventListener('click', startGame);
+
+function startGame() {
+  startScreen.style.display = 'none';
+  gameCanvas.style.display = 'block';
+  
+}
