@@ -1,8 +1,17 @@
 "use strict";
-window.addEventListener("load", onload);
+window.addEventListener("load", gameOn);
 
 let life = 3;
 let point = 0;
+
+function gameOn () {
+
+document.querySelector("#musik").currentTime = 1;
+document.querySelector("#musik").play();
+startButton.addEventListener('click', startGame);
+
+
+}
 
 function onload() {
     
@@ -33,7 +42,7 @@ function onload() {
 
 
 function checkScore (){
-    if (point < 15) {
+    if (point < 12) {
         gameOver();
     }
     else {
@@ -154,7 +163,7 @@ function sharkGone (){
     haj.offsetWidth;
     haj.classList.add("haj_container");
     haj.classList.remove("paused");
-    haj.addEventListener("mousedown", clickHaj);
+    haj.addEventListener("mousedown", clickHaj);    
     
 }
 
@@ -283,12 +292,10 @@ var startButton = document.getElementById('start-button');
 var gameSkærm = document.getElementById('game-skærm');
 
 
-document.querySelector("#musik").currentTime = 1;
-document.querySelector("#musik").play();
-startButton.addEventListener('click', startGame);
 
 function startGame() {
   startScreen.style.display = 'none';
-  gameCanvas.style.display = 'block';
+  gameSkærm.style.display = 'block';
+  onload();
   
 }

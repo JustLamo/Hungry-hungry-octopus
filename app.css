@@ -4,8 +4,13 @@ body{
 
 }
 
+* {
+    user-select: none;
+}
+
 img {
     width: 100%;
+    -webkit-user-drag: none;
 }
 
 #screen {
@@ -159,12 +164,12 @@ animation-direction: alternate-reverse;
     height: 50%;
     width: 15%;
     position: absolute;
-    top: 73%;
+    top: 68%;
     left: 60%;
 }
 
 .timer_container{
-    animation-duration: 50s;
+    animation-duration: 40s;
     animation-name: timecontainer;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -186,7 +191,7 @@ animation-direction: alternate-reverse;
     top: 78%;
     left: 85%;
     position: absolute;
-    z-index: 999;
+    z-index: 20;
 }
 
 #point_counter{
